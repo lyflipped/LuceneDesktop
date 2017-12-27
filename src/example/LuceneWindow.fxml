@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="1000.0" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+	  <Label layoutX="50.0" layoutY="20.0" text="Lucene" prefHeight="30"/>   
+   
+   	  <Label layoutX="10.0" layoutY="100.0" text="Data Source:" />
+   	  <TextField fx:id="txt_docPath" editable="false" layoutX="10.0" layoutY="130.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="btn_docPath" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleDocPathClick" prefWidth="200.0" text="Choose Forder" />
+      
+      <Label layoutX="10.0" layoutY="210.0" text="Index Directory:" />
+      <TextField fx:id="txt_indexPath" editable="false" layoutX="10.0" layoutY="240.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="btn_indexPath" layoutX="10.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleIndexPathClick" prefWidth="200.0" text="Choose Forder" />
+      
+      <Button fx:id="btn_index" layoutX="10.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleIndex" prefHeight="50.0" prefWidth="200.0" text="Create indexes" />
+      
+      
+      <Label layoutX="230.0" layoutY="20.0" text="Key Word:" />
+      <TextField fx:id="txt_keyword" layoutX="320.0" layoutY="20.0" prefHeight="25.0" prefWidth="280.0" />
+      <Button fx:id="btn_query" defaultButton="true" layoutX="610.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleQuery" prefHeight="25.0" prefWidth="80.0" text="Search" />
+    
+      <TableView fx:id="table" layoutX="230.0" layoutY="70.0" prefHeight="420.0" prefWidth="460.0">
+        <columns>
+          <TableColumn fx:id="col_term" prefWidth="75.0" text="Term" />
+          <TableColumn fx:id="col_path" prefWidth="385.0" text="Path" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
